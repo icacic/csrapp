@@ -1,0 +1,39 @@
+{
+  "name": "Attachment",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "extension",
+      "fieldType": "Extension",
+      "fieldValues": "PDF,XLS,DOC,JPG,PNG,OTHER"
+    },
+    {
+      "fieldName": "file",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "ticket",
+      "otherEntityRelationshipName": "attachments",
+      "relationshipName": "ticket",
+      "otherEntityField": "description"
+    }
+  ],
+  "changelogDate": "20201204142900",
+  "entityTableName": "attachment",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

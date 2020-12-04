@@ -1,0 +1,30 @@
+{
+  "csrappApp": {
+    "hDUser": {
+      "home": {
+        "title": "HD Users",
+        "createLabel": "Создать новый HD User",
+        "createOrEditLabel": "Создать или отредактировать HD User",
+        "search": "Найти HD User",
+        "notFound": "No HD Users found"
+      },
+      "created": "Новый HD User создан с идентификатором {{ param }}",
+      "updated": "HD User обновлен с идентификатором {{ param }}",
+      "deleted": "HD User удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить HD User {{ id }}?"
+      },
+      "detail": {
+        "title": "HD User"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "address": "Address",
+      "user": "User",
+      "organization": "Organization",
+      "projects": "Projects",
+      "tickets": "Tickets"
+    }
+  }
+}

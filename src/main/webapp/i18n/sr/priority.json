@@ -1,0 +1,23 @@
+{
+  "csrappApp": {
+    "priority": {
+      "home": {
+        "title": "Priorities",
+        "createLabel": "Kreiraj novi Priority",
+        "createOrEditLabel": "Kreirajte ili izmenite Priority",
+        "search": "Potražite Priority",
+        "notFound": "No Priorities found"
+      },
+      "created": "Kreiran je novi Priority pod nazivom {{ param }}",
+      "updated": "Priority pod nazivom {{ param }} je ažuriran",
+      "deleted": "Priority pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Priority pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Priority"
+      },
+      "name": "Name"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "csrappApp": {
+    "project": {
+      "home": {
+        "title": "Projects",
+        "createLabel": "Kreiraj novi Project",
+        "createOrEditLabel": "Kreirajte ili izmenite Project",
+        "search": "Potražite Project",
+        "notFound": "No Projects found"
+      },
+      "created": "Kreiran je novi Project pod nazivom {{ param }}",
+      "updated": "Project pod nazivom {{ param }} je ažuriran",
+      "deleted": "Project pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Project pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Project"
+      },
+      "name": "Name",
+      "status": "Status",
+      "tickets": "Tickets",
+      "users": "Users",
+      "organization": "Organization"
+    }
+  }
+}

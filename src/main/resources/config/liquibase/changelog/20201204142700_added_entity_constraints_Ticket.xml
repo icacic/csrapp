@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Ticket.
+    -->
+    <changeSet id="20201204142700-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="status_id"
+                                 baseTableName="ticket"
+                                 constraintName="fk_ticket_status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ticket_status"/>
+
+        <addForeignKeyConstraint baseColumnNames="category_id"
+                                 baseTableName="ticket"
+                                 constraintName="fk_ticket_category_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="category"/>
+
+        <addForeignKeyConstraint baseColumnNames="priority_id"
+                                 baseTableName="ticket"
+                                 constraintName="fk_ticket_priority_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="priority"/>
+
+        <addForeignKeyConstraint baseColumnNames="ticket_id"
+                                 baseTableName="ticket_users"
+                                 constraintName="fk_ticket_users_ticket_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ticket"/>
+
+        <addForeignKeyConstraint baseColumnNames="users_id"
+                                 baseTableName="ticket_users"
+                                 constraintName="fk_ticket_users_users_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="hd_user"/>
+        
+        <addForeignKeyConstraint baseColumnNames="project_id"
+                                 baseTableName="ticket"
+                                 constraintName="fk_ticket_project_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="project"/>
+
+    </changeSet>
+</databaseChangeLog>

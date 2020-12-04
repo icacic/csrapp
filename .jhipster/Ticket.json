@@ -1,0 +1,69 @@
+{
+  "name": "Ticket",
+  "fields": [
+    {
+      "fieldName": "rbr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "attachment",
+      "otherEntityRelationshipName": "ticket",
+      "relationshipName": "attachments"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "ticketStatus",
+      "otherEntityRelationshipName": "ticket",
+      "relationshipName": "status",
+      "otherEntityField": "name"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "ticket",
+      "relationshipName": "category",
+      "otherEntityField": "name"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "priority",
+      "otherEntityRelationshipName": "ticket",
+      "relationshipName": "priority",
+      "otherEntityField": "name"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "hDUser",
+      "otherEntityRelationshipName": "tickets",
+      "relationshipName": "users",
+      "otherEntityField": "email",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "tickets",
+      "relationshipName": "project",
+      "otherEntityField": "name"
+    }
+  ],
+  "changelogDate": "20201204142700",
+  "entityTableName": "ticket",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

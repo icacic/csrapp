@@ -1,0 +1,26 @@
+{
+  "csrappApp": {
+    "attachment": {
+      "home": {
+        "title": "Attachments",
+        "createLabel": "Создать новый Attachment",
+        "createOrEditLabel": "Создать или отредактировать Attachment",
+        "search": "Найти Attachment",
+        "notFound": "No Attachments found"
+      },
+      "created": "Новый Attachment создан с идентификатором {{ param }}",
+      "updated": "Attachment обновлен с идентификатором {{ param }}",
+      "deleted": "Attachment удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Attachment {{ id }}?"
+      },
+      "detail": {
+        "title": "Attachment"
+      },
+      "name": "Name",
+      "extension": "Extension",
+      "file": "File",
+      "ticket": "Ticket"
+    }
+  }
+}

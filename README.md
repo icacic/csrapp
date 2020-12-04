@@ -13,7 +13,14 @@ After installing Node, you should be able to run the following command to instal
 You will only need to run this command when dependencies change in [package.json](package.json).
 
 ```
+	docker-compose -f postgres.yaml up -d
+	gradlew (pokrenete i backend i frontend)
+	npm start (samo frontend) a eclipse backend
+
+```
+
 npm install
+
 ```
 
 We use npm scripts and [Webpack][] as our build system.
@@ -23,11 +30,11 @@ auto-refreshes when files change on your hard drive.
 
 ```
 
-
 ./gradlew -x webpack
 
 npm start
-```
+
+````
 
 Npm is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
 specifying a newer version in [package.json](package.json). You can also run `npm update` and `npm install` to manage dependencies.
@@ -49,7 +56,7 @@ The service worker initialization code is commented out by default. To enable it
     });
   }
 </script>
-```
+````
 
 Note: [Workbox](https://developers.google.com/web/tools/workbox/) powers JHipster's service worker. It dynamically generates the `service-worker.js` file.
 

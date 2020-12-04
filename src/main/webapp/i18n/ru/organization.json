@@ -1,0 +1,27 @@
+{
+  "csrappApp": {
+    "organization": {
+      "home": {
+        "title": "Organizations",
+        "createLabel": "Создать новый Organization",
+        "createOrEditLabel": "Создать или отредактировать Organization",
+        "search": "Найти Organization",
+        "notFound": "No Organizations found"
+      },
+      "created": "Новый Organization создан с идентификатором {{ param }}",
+      "updated": "Organization обновлен с идентификатором {{ param }}",
+      "deleted": "Organization удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Organization {{ id }}?"
+      },
+      "detail": {
+        "title": "Organization"
+      },
+      "name": "Name",
+      "address": "Address",
+      "type": "Type",
+      "projects": "Projects",
+      "users": "Users"
+    }
+  }
+}

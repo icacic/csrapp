@@ -1,0 +1,57 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-project-heading" jhiTranslate="csrappApp.project.home.createOrEditLabel">Create or edit a Project</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="csrappApp.project.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           formControlName="name"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="csrappApp.project.status" for="field_status">Status</label>
+                    <select class="form-control" name="status" formControlName="status" id="field_status">
+                        <option value="Active">{{ 'csrappApp.ProjectStatus.Active' | translate }}</option>
+                        <option value="Inactive">{{ 'csrappApp.ProjectStatus.Inactive' | translate }}</option>
+                        <option value="OnHold">{{ 'csrappApp.ProjectStatus.OnHold' | translate }}</option>
+                        <option value="Complicated">{{ 'csrappApp.ProjectStatus.Complicated' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label jhiTranslate="csrappApp.project.users" for="field_users">Users</label>
+                    <select class="form-control" id="field_users" multiple name="users" formControlName="users">
+                        <option [ngValue]="getSelected(editForm.get('users')!.value, hDUserOption)" *ngFor="let hDUserOption of hdusers; trackBy: trackById">{{ hDUserOption.email }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="csrappApp.project.organization" for="field_organization">Organization</label>
+                    <select class="form-control" id="field_organization" name="organization" formControlName="organizationId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="organizationOption.id" *ngFor="let organizationOption of organizations; trackBy: trackById">{{ organizationOption.name }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

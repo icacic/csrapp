@@ -1,0 +1,30 @@
+{
+  "csrappApp": {
+    "ticket": {
+      "home": {
+        "title": "Tickets",
+        "createLabel": "Kreiraj novi Ticket",
+        "createOrEditLabel": "Kreirajte ili izmenite Ticket",
+        "search": "Potražite Ticket",
+        "notFound": "No Tickets found"
+      },
+      "created": "Kreiran je novi Ticket pod nazivom {{ param }}",
+      "updated": "Ticket pod nazivom {{ param }} je ažuriran",
+      "deleted": "Ticket pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Ticket pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Ticket"
+      },
+      "rbr": "Rbr",
+      "description": "Description",
+      "attachments": "Attachments",
+      "status": "Status",
+      "category": "Category",
+      "priority": "Priority",
+      "users": "Users",
+      "project": "Project"
+    }
+  }
+}

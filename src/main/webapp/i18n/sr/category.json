@@ -1,0 +1,23 @@
+{
+  "csrappApp": {
+    "category": {
+      "home": {
+        "title": "Categories",
+        "createLabel": "Kreiraj novi Category",
+        "createOrEditLabel": "Kreirajte ili izmenite Category",
+        "search": "Potražite Category",
+        "notFound": "No Categories found"
+      },
+      "created": "Kreiran je novi Category pod nazivom {{ param }}",
+      "updated": "Category pod nazivom {{ param }} je ažuriran",
+      "deleted": "Category pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Category pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Category"
+      },
+      "name": "Name"
+    }
+  }
+}

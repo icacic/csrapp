@@ -1,0 +1,23 @@
+{
+  "csrappApp": {
+    "priority": {
+      "home": {
+        "title": "Priorities",
+        "createLabel": "Создать новый Priority",
+        "createOrEditLabel": "Создать или отредактировать Priority",
+        "search": "Найти Priority",
+        "notFound": "No Priorities found"
+      },
+      "created": "Новый Priority создан с идентификатором {{ param }}",
+      "updated": "Priority обновлен с идентификатором {{ param }}",
+      "deleted": "Priority удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Priority {{ id }}?"
+      },
+      "detail": {
+        "title": "Priority"
+      },
+      "name": "Name"
+    }
+  }
+}

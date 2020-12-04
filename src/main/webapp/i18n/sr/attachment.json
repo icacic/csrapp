@@ -1,0 +1,26 @@
+{
+  "csrappApp": {
+    "attachment": {
+      "home": {
+        "title": "Attachments",
+        "createLabel": "Kreiraj novi Attachment",
+        "createOrEditLabel": "Kreirajte ili izmenite Attachment",
+        "search": "Potražite Attachment",
+        "notFound": "No Attachments found"
+      },
+      "created": "Kreiran je novi Attachment pod nazivom {{ param }}",
+      "updated": "Attachment pod nazivom {{ param }} je ažuriran",
+      "deleted": "Attachment pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Attachment pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Attachment"
+      },
+      "name": "Name",
+      "extension": "Extension",
+      "file": "File",
+      "ticket": "Ticket"
+    }
+  }
+}

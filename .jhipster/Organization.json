@@ -1,0 +1,43 @@
+{
+  "name": "Organization",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "OrganizationType",
+      "fieldValues": "BUSINESS,GOVERNMENT"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "organization",
+      "relationshipName": "projects"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "hDUser",
+      "otherEntityRelationshipName": "organization",
+      "relationshipName": "users"
+    }
+  ],
+  "changelogDate": "20201204142500",
+  "entityTableName": "organization",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

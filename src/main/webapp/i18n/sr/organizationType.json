@@ -1,0 +1,9 @@
+{
+  "csrappApp": {
+    "OrganizationType": {
+      "null": "",
+      "BUSINESS": "BUSINESS",
+      "GOVERNMENT": "GOVERNMENT"
+    }
+  }
+}

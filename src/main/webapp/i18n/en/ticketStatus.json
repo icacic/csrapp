@@ -1,0 +1,23 @@
+{
+  "csrappApp": {
+    "ticketStatus": {
+      "home": {
+        "title": "Ticket Statuses",
+        "createLabel": "Create a new Ticket Status",
+        "createOrEditLabel": "Create or edit a Ticket Status",
+        "search": "Search for Ticket Status",
+        "notFound": "No Ticket Statuses found"
+      },
+      "created": "A new Ticket Status is created with identifier {{ param }}",
+      "updated": "A Ticket Status is updated with identifier {{ param }}",
+      "deleted": "A Ticket Status is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ticket Status {{ id }}?"
+      },
+      "detail": {
+        "title": "Ticket Status"
+      },
+      "name": "Name"
+    }
+  }
+}

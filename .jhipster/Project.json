@@ -1,0 +1,48 @@
+{
+  "name": "Project",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "ProjectStatus",
+      "fieldValues": "Active,Inactive,OnHold,Complicated"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "ticket",
+      "otherEntityRelationshipName": "project",
+      "relationshipName": "tickets"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "hDUser",
+      "otherEntityRelationshipName": "projects",
+      "relationshipName": "users",
+      "otherEntityField": "email",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "organization",
+      "otherEntityRelationshipName": "projects",
+      "relationshipName": "organization",
+      "otherEntityField": "name"
+    }
+  ],
+  "changelogDate": "20201204142600",
+  "entityTableName": "project",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

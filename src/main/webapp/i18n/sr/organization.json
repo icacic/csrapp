@@ -1,0 +1,27 @@
+{
+  "csrappApp": {
+    "organization": {
+      "home": {
+        "title": "Organizations",
+        "createLabel": "Kreiraj novi Organization",
+        "createOrEditLabel": "Kreirajte ili izmenite Organization",
+        "search": "Potražite Organization",
+        "notFound": "No Organizations found"
+      },
+      "created": "Kreiran je novi Organization pod nazivom {{ param }}",
+      "updated": "Organization pod nazivom {{ param }} je ažuriran",
+      "deleted": "Organization pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Organization pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Organization"
+      },
+      "name": "Name",
+      "address": "Address",
+      "type": "Type",
+      "projects": "Projects",
+      "users": "Users"
+    }
+  }
+}

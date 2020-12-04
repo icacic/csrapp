@@ -1,0 +1,11 @@
+{
+  "csrappApp": {
+    "ProjectStatus": {
+      "null": "",
+      "Active": "Active",
+      "Inactive": "Inactive",
+      "OnHold": "OnHold",
+      "Complicated": "Complicated"
+    }
+  }
+}

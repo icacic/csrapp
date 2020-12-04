@@ -48,6 +48,22 @@ public class CacheConfiguration {
             createCache(cm, hr.ericsson.etkca.domain.User.class.getName());
             createCache(cm, hr.ericsson.etkca.domain.Authority.class.getName());
             createCache(cm, hr.ericsson.etkca.domain.User.class.getName() + ".authorities");
+            createCache(cm, hr.ericsson.etkca.domain.Organization.class.getName());
+            createCache(cm, hr.ericsson.etkca.domain.Organization.class.getName() + ".projects");
+            createCache(cm, hr.ericsson.etkca.domain.Organization.class.getName() + ".users");
+            createCache(cm, hr.ericsson.etkca.domain.Project.class.getName());
+            createCache(cm, hr.ericsson.etkca.domain.Project.class.getName() + ".tickets");
+            createCache(cm, hr.ericsson.etkca.domain.Project.class.getName() + ".users");
+            createCache(cm, hr.ericsson.etkca.domain.Ticket.class.getName());
+            createCache(cm, hr.ericsson.etkca.domain.Ticket.class.getName() + ".attachments");
+            createCache(cm, hr.ericsson.etkca.domain.Ticket.class.getName() + ".users");
+            createCache(cm, hr.ericsson.etkca.domain.HDUser.class.getName());
+            createCache(cm, hr.ericsson.etkca.domain.HDUser.class.getName() + ".projects");
+            createCache(cm, hr.ericsson.etkca.domain.Attachment.class.getName());
+            createCache(cm, hr.ericsson.etkca.domain.TicketStatus.class.getName());
+            createCache(cm, hr.ericsson.etkca.domain.Category.class.getName());
+            createCache(cm, hr.ericsson.etkca.domain.Priority.class.getName());
+            createCache(cm, hr.ericsson.etkca.domain.HDUser.class.getName() + ".tickets");
             // jhipster-needle-ehcache-add-entry
         };
     }

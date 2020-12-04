@@ -1,0 +1,23 @@
+{
+  "csrappApp": {
+    "ticketStatus": {
+      "home": {
+        "title": "Ticket Statuses",
+        "createLabel": "Kreiraj novi Ticket Status",
+        "createOrEditLabel": "Kreirajte ili izmenite Ticket Status",
+        "search": "Potražite Ticket Status",
+        "notFound": "No Ticket Statuses found"
+      },
+      "created": "Kreiran je novi Ticket Status pod nazivom {{ param }}",
+      "updated": "Ticket Status pod nazivom {{ param }} je ažuriran",
+      "deleted": "Ticket Status pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Ticket Status pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Ticket Status"
+      },
+      "name": "Name"
+    }
+  }
+}

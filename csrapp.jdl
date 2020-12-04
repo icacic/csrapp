@@ -1,5 +1,5 @@
 entity Organization {
-	name Strig
+	name String
     address String
     type OrganizationType
 }
@@ -52,8 +52,8 @@ relationship OneToMany {
 }
 
 relationship ManyToMany {
-	Project{users(email)} to HDUser
-    Ticket{users(email)} to HDUser
+	Project{users(email)} to HDUser{projects(name)}
+    Ticket{users(email)} to HDUser{tickets(name)}
 }
 
 relationship ManyToOne {

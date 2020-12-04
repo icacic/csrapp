@@ -1,0 +1,95 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="csrappApp.hDUser.home.title">HD Users</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-hd-user" [routerLink]="['/hd-user/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span class="hidden-sm-down"  jhiTranslate="csrappApp.hDUser.home.createLabel">
+            Create a new HD User
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'csrappApp.hDUser.home.search' | translate }}">
+
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon icon="search"></fa-icon>
+                    </button>
+
+                    <button class="input-group-append btn btn-danger" (click)="search('')" *ngIf="currentSearch">
+                        <fa-icon icon="trash-alt"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="hDUsers?.length === 0">
+        <span jhiTranslate="csrappApp.hDUser.home.notFound">No hDUsers found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="hDUsers && hDUsers.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="csrappApp.hDUser.firstName">First Name</span></th>
+                    <th scope="col" ><span jhiTranslate="csrappApp.hDUser.lastName">Last Name</span></th>
+                    <th scope="col" ><span jhiTranslate="csrappApp.hDUser.email">Email</span></th>
+                    <th scope="col" ><span jhiTranslate="csrappApp.hDUser.address">Address</span></th>
+                    <th scope="col" ><span jhiTranslate="csrappApp.hDUser.user">User</span></th>
+                    <th scope="col" ><span jhiTranslate="csrappApp.hDUser.organization">Organization</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let hDUser of hDUsers ;trackBy: trackId">
+                    <td><a [routerLink]="['/hd-user', hDUser.id, 'view']">{{ hDUser.id }}</a></td>
+                    <td>{{ hDUser.firstName }}</td>
+                    <td>{{ hDUser.lastName }}</td>
+                    <td>{{ hDUser.email }}</td>
+                    <td>{{ hDUser.address }}</td>
+                    <td>
+                        {{ hDUser.userEmail }}
+                    </td>
+                    <td>
+                        <div *ngIf="hDUser.organizationId">
+                            <a [routerLink]="['/organization', hDUser.organizationId , 'view']" >{{ hDUser.organizationName }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/hd-user', hDUser.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/hd-user', hDUser.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(hDUser)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

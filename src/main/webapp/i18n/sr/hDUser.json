@@ -1,0 +1,30 @@
+{
+  "csrappApp": {
+    "hDUser": {
+      "home": {
+        "title": "HD Users",
+        "createLabel": "Kreiraj novi HD User",
+        "createOrEditLabel": "Kreirajte ili izmenite HD User",
+        "search": "Potražite HD User",
+        "notFound": "No HD Users found"
+      },
+      "created": "Kreiran je novi HD User pod nazivom {{ param }}",
+      "updated": "HD User pod nazivom {{ param }} je ažuriran",
+      "deleted": "HD User pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete HD User pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "HD User"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "address": "Address",
+      "user": "User",
+      "organization": "Organization",
+      "projects": "Projects",
+      "tickets": "Tickets"
+    }
+  }
+}

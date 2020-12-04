@@ -1,0 +1,11 @@
+id;name;extension;file;file_content_type
+1;Savings Account;PDF;../fake-data/blob/hipster.png;image/png
+2;Soap;DOC;../fake-data/blob/hipster.png;image/png
+3;Squares Concrete Legacy;OTHER;../fake-data/blob/hipster.png;image/png
+4;Investment Account;OTHER;../fake-data/blob/hipster.png;image/png
+5;invoice;OTHER;../fake-data/blob/hipster.png;image/png
+6;Usability Serbian Dinar;PDF;../fake-data/blob/hipster.png;image/png
+7;back-end withdrawal;JPG;../fake-data/blob/hipster.png;image/png
+8;Generic;DOC;../fake-data/blob/hipster.png;image/png
+9;even-keeled invoice;PDF;../fake-data/blob/hipster.png;image/png
+10;payment benchmark;JPG;../fake-data/blob/hipster.png;image/png

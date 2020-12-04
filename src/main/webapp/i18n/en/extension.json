@@ -1,0 +1,13 @@
+{
+  "csrappApp": {
+    "Extension": {
+      "null": "",
+      "PDF": "PDF",
+      "XLS": "XLS",
+      "DOC": "DOC",
+      "JPG": "JPG",
+      "PNG": "PNG",
+      "OTHER": "OTHER"
+    }
+  }
+}
