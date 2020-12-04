@@ -1,0 +1,75 @@
+entity Organization {
+	name Strig
+    address String
+    type OrganizationType
+}
+entity Project {
+	name String
+    status ProjectStatus    
+}
+entity Ticket {
+	rbr String
+    description TextBlob
+}
+entity HDUser {
+	firstName String
+    lastName String
+    email String
+    address String
+}
+entity Attachment {
+	name String
+    extension Extension
+    file AnyBlob    
+}
+entity TicketStatus {
+	name String
+}
+entity Category  {
+	name String
+}
+entity Priority {
+	name String
+}
+enum Extension {
+	PDF, XLS, DOC, JPG, PNG, OTHER
+}
+enum OrganizationType {
+	BUSINESS, GOVERNMENT
+}
+enum Status {
+	Active, Inactive
+}
+enum ProjectStatus {
+	Active, Inactive, OnHold, Complicated
+}
+
+relationship OneToMany {
+	Organization{projects(name)} to Project{organization(name)}
+    Project{tickets(description)} to Ticket{project(name)} 
+    Organization{users(email)} to HDUser{organization(name)}
+    Ticket{attachments(name)} to Attachment{ticket(description)}
+}
+
+relationship ManyToMany {
+	Project{users(email)} to HDUser
+    Ticket{users(email)} to HDUser
+}
+
+relationship ManyToOne {
+	Ticket{status(name)} to TicketStatus
+    Ticket{category(name)} to Category
+    Ticket{priority(name)} to Priority
+    HDUser{user(email)} to User
+}
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceClass
+
+filter *
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
